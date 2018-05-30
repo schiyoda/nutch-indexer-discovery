@@ -31,4 +31,8 @@
     <name>hbase.cluster.distributed</name>
     <value>false</value>
   </property>
+  <property>
+    <name>hbase.regionserver.lease.period</name>
+    <value>300000</value>
+  </property> 
 </configuration>
