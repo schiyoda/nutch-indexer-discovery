@@ -93,6 +93,11 @@ task setupNutch(dependsOn: extractNutch){
       from "$projectDir/windows_libraries/"
       into "$nutchDir/lib/native/"
     }
+    //add for jsoup-extractor
+    copy {
+      from "$projectDir/plugin/jsoup-extractor"
+      into "$nutchDir/src/plugin/jsoup-extractor"
+    }
   }
 }
 
@@ -107,6 +112,8 @@ if(project.tasks.findByName('runtime')){
     doLast{
       copyFile("$projectDir/conf/nutch-discovery/nutch-site.xml", "$nutchDir/runtime/local/conf/nutch-site.xml")
       copyFile("$projectDir/conf/hbase/hbase-site.xml", "$nutchDir/runtime/local/conf/hbase-site.xml")
+      //add for jsoup-extractor
+      copyFile("$projectDir/conf/nutch-discovery/jsoup-extractor.xml", "$nutchDir/runtime/local/conf/jsoup-extractor.xml")
     }
   }
 }

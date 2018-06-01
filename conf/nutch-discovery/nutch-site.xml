@@ -36,7 +36,7 @@
   <property>
     <name>plugin.includes</name>
     <!-- do **NOT** enable the parse-html plugin, if you want proper HTML parsing. Use something like parse-tika! -->
-    <value>protocol-httpclient|urlfilter-regex|parse-(text|tika|js)|index-(basic|anchor)|query-(basic|site|url)|response-(json|xml)|summary-basic|scoring-opic|urlnormalizer-(pass|regex|basic)|indexer-discovery</value>
+    <value>protocol-httpclient|urlfilter-regex|parse-(text|tika|js)|jsoup-extractor|index-(basic|anchor)|query-(basic|site|url)|response-(json|xml)|summary-basic|scoring-opic|urlnormalizer-(pass|regex|basic)|indexer-discovery</value>
   </property>
   <property>
     <name>db.ignore.external.links</name>
@@ -69,5 +69,13 @@
   <property>
     <name>discovery.collection.id</name>
     <value></value>
+  </property>
+  <property>
+    <name>jsoup.extractor.property.file</name>
+    <value>jsoup-extractor.xml</value>
+  </property>
+  <property>
+    <name>http.content.limit</name>
+    <value>-1</value>
   </property>
 </configuration>

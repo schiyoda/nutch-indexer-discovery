@@ -68,6 +68,7 @@
      <ant dir="parse-swf" target="deploy"/>
      <ant dir="parse-zip" target="deploy"/>
      -->
+     <ant dir="jsoup-extractor" target="deploy"/>
   </target>
 
   <!-- ====================================================== -->
@@ -107,6 +108,7 @@
      <ant dir="parse-swf" target="test"/>
      <ant dir="parse-zip" target="test"/>
       -->
+     <ant dir="jsoup-extractor" target="test"/>
   </target>
 
   <!-- ====================================================== -->
@@ -153,5 +155,6 @@
     <ant dir="urlnormalizer-basic" target="clean"/>
     <ant dir="urlnormalizer-pass" target="clean"/>
     <ant dir="urlnormalizer-regex" target="clean"/>
+    <ant dir="jsoup-extractor" target="clean"/>
   </target>
 </project>

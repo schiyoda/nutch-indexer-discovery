@@ -95,6 +95,11 @@ public class DiscoNutchDoc {
                 documentValuesMap.put(fieldName, doc.getFieldValue(fieldName));
             }
         }
+
+        Enrich enrich = new Enrich();
+        Enrich.Annotate annotate = enrich.new Annotate(doc.getFieldValue("text2"));
+        documentValuesMap.put("annotation", annotate);
+
         return documentValuesMap;
     }
 
@@ -103,4 +108,6 @@ public class DiscoNutchDoc {
             throw new IllegalArgumentException("Nutch document and its field id cannot be null.");
         }
     }
+
+
 }
