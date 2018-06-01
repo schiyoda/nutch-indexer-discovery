@@ -36,7 +36,7 @@
   <property>
     <name>plugin.includes</name>
     <!-- do **NOT** enable the parse-html plugin, if you want proper HTML parsing. Use something like parse-tika! -->
-    <value>protocol-httpclient|urlfilter-regex|parse-(text|tika|js)|index-(basic|anchor)|query-(basic|site|url)|response-(json|xml)|summary-basic|scoring-opic|urlnormalizer-(pass|regex|basic)|indexer-discovery</value>
+    <value>protocol-file|urlfilter-regex|parse-(text|tika|js|metatags)|index-(basic|anchor|metadata)|query-(basic|site|url)|response-(json|xml)|summary-basic|scoring-opic|urlnormalizer-(pass|regex|basic)|indexer-discovery</value> 
   </property>
   <property>
     <name>db.ignore.external.links</name>
@@ -69,5 +69,17 @@
   <property>
     <name>discovery.collection.id</name>
     <value></value>
+  </property>
+  <property>
+    <name>file.crawl.parent</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>file.content.limit</name>
+    <value>-1</value>
+  </property>
+  <property>
+    <name>index.metadata</name>
+    <value>Last-Modified</value>
   </property>
 </configuration>
